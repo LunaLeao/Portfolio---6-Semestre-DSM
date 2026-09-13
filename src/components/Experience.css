@@ -1,0 +1,117 @@
+.experience-section {
+  padding: 5rem 2rem;
+  position: relative;
+}
+
+.timeline-container {
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Linha central vertical que conecta os itens (visível em telas maiores) */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(168, 85, 247, 0.8), rgba(253, 224, 71, 0.3), rgba(168, 85, 247, 0.1));
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+}
+
+/* Ponto brilhante na linha do tempo */
+.timeline-dot {
+  position: absolute;
+  left: 15px;
+  top: 24px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--card-gray, #16102a);
+  border: 2px solid var(--accent-yellow, #fde047);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(253, 224, 71, 0.5);
+  z-index: 2;
+}
+
+/* O Card Individual com Glassmorphism */
+.timeline-card {
+  background-color: rgba(22, 16, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1.5px solid rgba(168, 85, 247, 0.3);
+  box-shadow: 0 10px 30px rgba(15, 10, 30, 0.5);
+  transition: all 0.4s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(168, 85, 247, 0.8);
+  box-shadow: 0 15px 35px rgba(168, 85, 247, 0.2);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.timeline-company {
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 700;
+}
+
+.timeline-role {
+  font-size: 1.05rem;
+  color: var(--accent-yellow, #fde047);
+  font-weight: 600;
+  display: block;
+  margin-top: 4px;
+}
+
+.timeline-period {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(168, 85, 247, 0.15);
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  font-weight: 500;
+}
+
+.timeline-description {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+  .timeline-container::before {
+    left: 14px;
+  }
+  .timeline-item {
+    padding-left: 40px;
+  }
+  .timeline-dot {
+    left: 5px;
+  }
+}

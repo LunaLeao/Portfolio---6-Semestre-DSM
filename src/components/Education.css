@@ -1,0 +1,117 @@
+.education-section {
+  padding: 5rem 2rem;
+  position: relative;
+}
+
+.section-title.text-center {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--accent-yellow, #fde047);
+  margin-bottom: 4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.education-grid {
+  display: grid;
+  /* Cria duas colunas em telas grandes e uma em telas pequenas */
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* O Card com Glassmorphism */
+.education-card {
+  background-color: rgba(22, 16, 42, 0.85); /* Fundo estável */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  border: 1.5px solid rgba(168, 85, 247, 0.3);
+  box-shadow: 0 10px 30px rgba(15, 10, 30, 0.5);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s ease; /* Animação suave no hover */
+}
+
+/* Efeito de flutuação e brilho ao passar o mouse */
+.education-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(168, 85, 247, 0.8);
+  box-shadow: 0 20px 40px rgba(168, 85, 247, 0.2);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1.2rem;
+}
+
+.edu-icon {
+  font-size: 1.8rem;
+}
+
+.card-header h3 {
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 600;
+}
+
+.edu-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex-grow: 1; /* Empurra o botão do segundo card lá pra baixo */
+}
+
+.edu-details li {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+/* Destacando os títulos das informações */
+.edu-label {
+  font-weight: 600;
+  color: var(--accent-yellow, #fde047); /* Amarelo das estrelas/lua */
+  margin-right: 8px;
+}
+
+.card-footer {
+  margin-top: 2rem;
+}
+
+/* Botão Moderno */
+.cert-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.cert-btn:hover {
+  background: rgba(168, 85, 247, 0.25);
+  border-color: var(--accent-yellow, #fde047); /* Fica com a borda amarela no hover */
+  color: var(--accent-yellow, #fde047);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+}
