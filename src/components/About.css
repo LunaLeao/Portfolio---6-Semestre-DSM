@@ -1,0 +1,98 @@
+.about-section {
+  padding: 5rem 2rem;
+  position: relative;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Lado Esquerdo: Textos */
+.about-tagline {
+  color: var(--accent-yellow, #fde047);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Lado Direito: Card de Filosofia Estelar (Versão Estável sem piscar) */
+.about-card-philosophy {
+  background-color: rgba(22, 16, 42, 0.85); /* Fundo sólido translúcido estável */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  
+  /* Borda limpa e estável com gradiente direto */
+  border: 1.5px solid rgba(168, 85, 247, 0.4);
+  box-shadow: 0 15px 35px rgba(15, 10, 30, 0.6),
+              inset 0 0 20px rgba(168, 85, 247, 0.05); /* Brilho interno sutil */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.philosophy-badge {
+  font-size: 0.85rem;
+  color: var(--accent-yellow, #fde047);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.philosophy-quote {
+  color: #fff;
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.5;
+  font-weight: 500;
+  margin: 0;
+  z-index: 2;
+}
+
+.philosophy-moon-icon {
+  position: absolute;
+  right: -10px;
+  bottom: -15px;
+  font-size: 5rem;
+  opacity: 0.15;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
