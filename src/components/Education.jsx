@@ -30,8 +30,8 @@ export default function Education() {
             <h3>Design Gráfico</h3>
           </div>
           <ul className="edu-details">
-            <li><span className="edu-label">Instituição:</span> Centro Social Nossa Senhora do Bom Parto</li>
-            <li><span className="edu-label">Duração:</span> 400 horas</li>
+            <li><span className="edu-label">Instituição:</span> Centro Social Paróquia Santa Luzia</li>
+            <li><span className="edu-label">Duração:</span> 440 horas</li>
             <li><span className="edu-label">Habilidades:</span> Photoshop, Adobe Illustrator, Identidade Visual, entre diversos.</li>
           </ul>
           
