@@ -7,6 +7,15 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Importa dinamicamente as imagens da pasta assets (incluindo as logos)
+  const imagesGlob = import.meta.glob('../assets/**/*.{png,jpg,jpeg,svg}', { eager: true });
+
+  const getImageUrl = (path) => {
+    if (!path) return "";
+    const relativePath = path.replace('/src/', '../');
+    return imagesGlob[relativePath]?.default || path;
+  };
+
   // Como exibimos 2 cards por vez, o índice máximo deve parar 2 posições antes do fim
   const maxIndex = Math.max(0, projectsData.length - 2);
 
@@ -38,7 +47,6 @@ export default function Projects() {
         <div className="carousel-window">
           <div 
             className="carousel-track"
-            // Ajustado para 50% para que cada passo desloque o equivalente a 1 card (já que cabem 2 na tela)
             style={{ transform: `translateX(calc(-${currentIndex * 50}% - ${currentIndex * 12}px))` }}
           >
             {projectsData.map((project) => (
@@ -48,10 +56,10 @@ export default function Projects() {
                 onClick={() => setSelectedProject(project)}
                 style={{ cursor: "pointer" }}
               >
-                {/* Área da Logo do Projeto */}
+                {/* Área da Logo do Projeto processada pelo getImageUrl */}
                 <div className="project-card-logo">
                   <img 
-                    src={project.logo || "/assets/logos/default-logo.png"} 
+                    src={getImageUrl(project.logo)} 
                     alt={`Logo ${project.title}`} 
                   />
                 </div>

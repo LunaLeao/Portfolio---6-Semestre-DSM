@@ -37,7 +37,12 @@ export default function Education() {
           
           {/* Botão de certificado que fica alinhado no fundo */}
           <div className="card-footer">
-            <a href="#" className="cert-btn" target="_blank" rel="noopener noreferrer">
+            <a 
+              href={`${import.meta.env.BASE_URL}Certificado_Design_Grafico.pdf`} 
+              className="cert-btn" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               👁 Ver certificado
             </a>
           </div>
