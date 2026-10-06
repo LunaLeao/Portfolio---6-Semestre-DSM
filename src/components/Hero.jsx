@@ -69,7 +69,12 @@ export default function Hero() {
             </p>
 
             <div className="hero-actions">
-              <a href="#cv" className="hero-btn-cv">
+              <a
+                href={`${import.meta.env.BASE_URL}Curriculo_2026.pdf`}
+                className="hero-btn-cv"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 Download CV 📥
               </a>
 
@@ -80,7 +85,7 @@ export default function Hero() {
                 </div>
                 <div className="hero-social-links">
                   <a
-                    href="https://github.com/SEU-USUARIO"
+                    href="https://github.com/LunaLeao"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
@@ -88,7 +93,7 @@ export default function Hero() {
                     <FaGithub size={20} />
                   </a>
                   <a
-                    href="https://linkedin.com/in/SEU-USUARIO"
+                    href="https://www.linkedin.com/in/luna-leao-de-maria"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
